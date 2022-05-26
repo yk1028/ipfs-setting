@@ -1,0 +1,41 @@
+version: "3.4"  # optional since v1.27.0
+services:
+  ipfs-node:
+    networks:
+      - ipfs
+    image: ipfs/go-ipfs:v0.10.0
+    environment:
+      - IPFS_PROFILE=server
+      - LIBP2P_FORCE_PNET=1 # private ipfs 구성 시 필요한 설정
+      #- IPFS_SWARM_KEY_FILE=/data/ipfs/swarm.key # private ipfs 구성 시 필요한 key
+    ports:
+      - 4001:4001/tcp
+      - 4001:4001/udp
+      - 5001:5001
+      - 8080:8080
+      - 8081:8081
+    volumes:
+      - ./data/ipfs_data:/data/ipfs
+      - ./data/ipfs_staging:/export
+  ipfs-cluster:
+    depends_on:
+      - ipfs-node
+    networks:
+      - ipfs
+    image: ipfs/ipfs-cluster:latest
+    environment:
+      CLUSTER_PEERNAME: "${peerName}" # 각 cluster 별 이름 지정
+      CLUSTER_SECRET: "${secretKey}" # 위에서 생성한 secret key 정보 
+      CLUSTER_IPFSHTTP_NODEMULTIADDRESS: /dns4/ipfs-node/tcp/5001
+      CLUSTER_CRDT_TRUSTEDPEERS: '*'
+      CLUSTER_RESTAPI_HTTPLISTENMULTIADDRESS: /ip4/0.0.0.0/tcp/9094
+      CLUSTER_MONITORPINGINTERVAL: 2s
+    ports:
+      - 9094:9094
+      - 9096:9096
+    volumes:
+      - ./data/ipfs_cluster:/data/ipfs-cluster
+
+networks:
+  ipfs:
+    driver: bridge
