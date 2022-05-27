@@ -1,0 +1,10 @@
+{
+    "name": "Ice Lord's Armor",
+    "traits": [
+        {
+            "trait_type": "HP",
+            "trait_value": "1000"
+        }
+    ]
+    
+}
