@@ -1,10 +1,9 @@
 {
-    "name": "Ice Lord's Armor",
+    "name": "Flame Devil's Helmet",
     "traits": [
         {
             "trait_type": "HP",
-            "trait_value": "1000"
+            "trait_value": "2000"
         }
-    ]
-    
+    ]   
 }
