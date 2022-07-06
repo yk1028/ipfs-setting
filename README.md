@@ -78,12 +78,12 @@ $ docker exec ipfs-node ipfs swarm peers
   ```json
     {
         "cluster": {
-        //    ...
+        ...
             "peer_addresses": [
             "/ip4/3.35.210.47/tcp/9096/ipfs/12D3KooWCikJL8599zzvGEt1cujK5CbBoei8vHRThDWE6gJqJB6Z",
             "/ip4/13.125.54.137/tcp/9096/ipfs/12D3KooWJ3LndWyqYjMst2hHauY1NjcT1KEzDhHsreWx32mhtXSo"
             ]
         },
-    //  ...
+        ...
     }
   ```
