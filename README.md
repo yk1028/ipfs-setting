@@ -47,6 +47,7 @@ $ docker exec ipfs-node ipfs id
 ```shell
 $ docker exec ipfs-node ipfs bootstrap add /ip4/{연결할 peer의 IP}/tcp/4001/p2p/{연결할 peer의 id}
 
+
 # 예제
 $ docker exec ipfs-node ipfs bootstrap add /ip4/172.31.28.135/tcp/4001/p2p/12D3KooWSBgUZ3oTCCA3UavCrhjsbMK53zvhWFkvFX4UVP3Dxk1N                                      
 ```
@@ -57,6 +58,7 @@ $ docker exec ipfs-node ipfs bootstrap
 ```
 
 * peer 연결
+  * 주의 : `... no good addresses` 이런 error가 발생하면 swarm filters 확인 및 삭제
 ```shell
 $ docker exec ipfs-node ipfs swarm connect /ip4/{연결할 peer의 IP}/tcp/4001/p2p/{연결할 peer의 id}
 # 예제
