@@ -1,15 +1,22 @@
 # IPFS-setting
+### OS
+- ubuntu 18.04 x86/64
+
 ### Init 
 - init.sh
+
 ### Key setting 
 - swarm-key.sh -> ~/data/ipfs_data/swarm.key
 - cluster-secret.sh -> docker-compose.yml - ipfs-cluster - environment - CLUSTER_SECRET
+- directory 분리시 key setting 주의
 
 ## Docker command
 ### ipfs-node
 - `sudo docker-compose up -d ipfs-node`
   - docker-compse.yml이 있는 경로에서 실행
 - 아래 명령어에서 ipfs-node == container name (ex. `ubuntu_ipfs-node_1`)
+- 맨 앞에 붙는 이름(ex. `ubuntu`)은 diretory 이름
+  
 * boot node 초기화
 ```shell
 $ docker exec ipfs-node ipfs bootstrap rm --all
@@ -43,7 +50,7 @@ $ docker exec ipfs-node ipfs id
 }
 ```
 
-* peer 등록
+* bootstrap 등록 (안해도 동작)
 ```shell
 $ docker exec ipfs-node ipfs bootstrap add /ip4/{연결할 peer의 IP}/tcp/4001/p2p/{연결할 peer의 id}
 
@@ -57,7 +64,8 @@ $ docker exec ipfs-node ipfs bootstrap add /ip4/172.31.28.135/tcp/4001/p2p/12D3K
 $ docker exec ipfs-node ipfs bootstrap
 ```
 
-* peer 연결
+* swarm peer 연결
+  * swarm.key 등록 필요
   * 주의 : `... no good addresses` 이런 error가 발생하면 swarm filters 확인 및 삭제
 ```shell
 $ docker exec ipfs-node ipfs swarm connect /ip4/{연결할 peer의 IP}/tcp/4001/p2p/{연결할 peer의 id}
@@ -75,8 +83,8 @@ $ docker exec ipfs-node ipfs swarm peers
   - docker-compse.yml이 있는 경로에서 실행
   - identity.json, service.json 없으면 자동 생성
 - cluster peer 연결
-  - /data/ipfs_cluster/server.json peer_addresses 추가
-  - 양쪽 모두 재시작해야 적용
+  - /data/ipfs_cluster/service.json peer_addresses 추가
+  - 등록 후 한 쪽 재시작
   ```json
     {
         "cluster": {
