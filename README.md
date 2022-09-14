@@ -77,6 +77,11 @@ $ docker exec ipfs-node ipfs swarm connect /ip4/172.31.28.135/tcp/4001/p2p/12D3K
 ```shell
 $ docker exec ipfs-node ipfs swarm peers
 ```
+
+* cli로 테스트 파일 추가
+  - data/ipfs_stage directory에 ipfs에 추가하고 싶은 test 파일 추가
+  - `ipfs add export/{file_path}`로 ipfs에 등록
+  - `ipfs cat {cid}`로 확인
   
 ### ipfs-cluster
 - `sudo docker-compose up -d ipfs-cluster`
@@ -97,3 +102,5 @@ $ docker exec ipfs-node ipfs swarm peers
         ...
     }
   ```
+
+
