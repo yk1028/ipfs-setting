@@ -102,5 +102,3 @@ $ docker exec ipfs-node ipfs swarm peers
         ...
     }
   ```
-
-
