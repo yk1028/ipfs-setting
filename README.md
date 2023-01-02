@@ -89,7 +89,7 @@ $ docker exec ipfs-node ipfs swarm peers
   - docker-compse.yml이 있는 경로에서 실행
   - identity.json, service.json 없으면 자동 생성
 - cluster peer 연결
-  - /data/ipfs_cluster/service.json peer_addresses 추가
+  - /data/ipfs_cluster/service.json peer_addresses 추가 (자기 자신 포함)
   - 등록 후 한 쪽 재시작
   ```json
     {
