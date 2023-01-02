@@ -7,7 +7,7 @@
 - source ~/.profile
 
 ### Key setting 
-- swarm-key.sh -> ~/data/ipfs_data/swarm.key
+- swarm-key.sh -> ~/data/ipfs_data/swarm.key (하나의 노드에서 실행 후 나머지 복사)
 - cluster-secret.sh -> docker-compose.yml - ipfs-cluster - environment - CLUSTER_SECRET
 - directory 분리시 key setting 주의
 
