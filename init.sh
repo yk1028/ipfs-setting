@@ -11,7 +11,7 @@ sudo tar -xvf go1.18.2.linux-amd64.tar.gz
 sudo mv go /usr/local
 cd ~
 
-# set go root, path
+# set go root, path (ubuntu)
 echo 'GOROOT="/usr/local/go"' >> ~/.profile
 echo 'GOPATH="$HOME/go"' >> ~/.profile
 echo 'PATH="$GOPATH/bin:$GOROOT/bin:$PATH"' >> ~/.profile
