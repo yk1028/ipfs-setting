@@ -4,6 +4,7 @@
 
 ### Init 
 - init.sh
+- source ~/.profile
 
 ### Key setting 
 - swarm-key.sh -> ~/data/ipfs_data/swarm.key
