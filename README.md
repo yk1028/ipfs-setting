@@ -1,6 +1,6 @@
 # IPFS-setting
 ### OS
-- ubuntu 18.04 x86/64
+- ubuntu 18.04 x86/64, ubuntu 20.04, ubuntu 22.04
 
 ### Init 
 - init.sh
