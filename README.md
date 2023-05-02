@@ -77,7 +77,7 @@ $ docker exec ipfs-node ipfs bootstrap
 * swarm peer 연결
   * swarm.key 등록 필요
   * 주의 : `... no good addresses` 이런 error가 발생하면 swarm filters 확인 및 삭제
-  * 주의 : `failed to negotiate security protocol: privnet: could not read full nonce` 발생 시 port 확인
+  * 주의 : `failed to negotiate security protocol: privnet: could not read full nonce` 발생 시 반대 쪽 swarm filters 확인
 ```shell
 $ docker exec ipfs-node ipfs swarm connect /ip4/{연결할 peer의 IP}/tcp/4001/p2p/{연결할 peer의 id}
 # 예제
