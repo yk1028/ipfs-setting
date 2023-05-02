@@ -2,6 +2,15 @@
 ### OS
 - ubuntu 18.04 x86/64, ubuntu 20.04, ubuntu 22.04
 
+### Port
+- ipfs server간 통신
+  -  ipfs-node : 4001
+  -  ipfs-cluster : 9096
+
+- station server 통신 포트
+  - api server : 5001
+  - g/w server : 8080
+
 ### Init 
 - init.sh
 - source ~/.profile
