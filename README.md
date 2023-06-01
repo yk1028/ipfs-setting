@@ -61,7 +61,7 @@ $ docker exec ipfs-node ipfs id
 ```
 
 * bootstrap 등록
-  - 노드 재시작시 swarm connect가 모두 끊기는데 bootstrap에 등록시 재연결(swarm peer로 연경)
+  - 노드 재시작시 swarm connect가 모두 끊기는데 bootstrap에 등록시 재연결(swarm peer로 연결)
 ```shell
 $ docker exec ipfs-node ipfs bootstrap add /ip4/{연결할 peer의 IP}/tcp/4001/p2p/{연결할 peer의 id}
 
