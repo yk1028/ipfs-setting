@@ -1,0 +1,7 @@
+{
+    "name":"testnet_tps2",
+    "type":"local",
+    "address":"xpla1tknd6230p6fcza5549myhjflhslx425fzxkxfm",
+    "pubkey":"{\"@type\":\"/ethermint.crypto.v1.ethsecp256k1.PubKey\",\"key\":\"AtE/0hLnnyU8XzKtL8i2ZNCFH0uOwKh0YBBM60VCAjka\"}",
+    "mnemonic":"salute found urban account angle basket cement sail never output gesture neck banner heart casino reveal life run picnic table between shoulder sad between"
+ }

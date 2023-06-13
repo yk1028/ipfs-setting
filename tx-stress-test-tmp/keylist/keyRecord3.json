@@ -1,0 +1,7 @@
+{
+    "name":"testnet_tps_receive",
+    "type":"local",
+    "address":"xpla14h2m0lthq3cqrg5guup2qglndgj2u7ljmkp4yl",
+    "pubkey":"{\"@type\":\"/ethermint.crypto.v1.ethsecp256k1.PubKey\",\"key\":\"AzA21X8Q07nPkLBop5rcip2ckj4mJ0crv195dRFe/lxN\"}",
+    "mnemonic":"fatal spider stove initial clock oak emotion alone tube cool exercise giraffe leopard have render bracket fan link sketch half tail tennis become canal"
+ }

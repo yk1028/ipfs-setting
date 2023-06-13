@@ -1,0 +1,6 @@
+wasm:
+  wasm_file: "./tester/testfiles/cw721_base-aarch64.wasm"
+  code_id_dir: "./tester/info/contractCode.json"
+  contract_addr_dir: "./tester/info/contractAddress.json"
+  nft_token_id: "test_token_id"
+  save_token_id_dir: "./tester/info/saveTokenId.json"

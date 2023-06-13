@@ -1,0 +1,44 @@
+# Parameters of the XPLA client.
+xpla_client:
+  # Chain ID
+  chain_id: "cube_47-5"
+
+  # XPLA client option
+  client_option:
+    # Set account number of address
+    account_number: 6252
+    # Set account sequence of address
+    sequence: 
+    # Broadcast mode (sync|async|block)
+    broadcast_mode: async
+    # Transaction gas limit
+    gas_limit: 100000
+    # Transaction gas price
+    gas_price:
+    # Transaction gas limit adjustment
+    gas_adjustment: 1
+    # Transaction fee amount
+    fee_amount:
+    # Set fee granter of transaction builder
+    fee_granter:
+    # Set timeout height of transaction builder
+    timeout_height:
+    # LCD URL
+    lcd_url: http://34.64.47.240:1317
+    # lcd_url: http://localhost:1317
+    # gRPC URL
+    # grpc_url: http://112.175.86.46:9090
+    # grpc_url: http://localhost:9090
+    # RPC URL
+    # rpc_url: http://localhost:26657
+    # Ethereum VM RPC URL
+    # evm_rpc_url: http://localhost:8545
+    # Set output document name/path when created transaction with json file
+    # output_document: "./bank_send.json"
+  
+# Tester option
+tester_option:
+  # seconds
+  test_time: 60
+  # test transaction (send|contract)
+  test_tx: send
