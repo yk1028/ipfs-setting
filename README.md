@@ -115,3 +115,6 @@ $ docker exec ipfs-node ipfs swarm peers
         ...
     }
   ```
+
+- expired-in option
+  - pin 만료 시간 설정 가능
